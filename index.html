@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educa+ | Sua jornada educacional</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        :root {
+            --blue: #4a7bff;
+            --blue-light: #eef3ff;
+            --green: #2ecc71;
+            --green-light: #e8f8f0;
+            --purple: #9b59b6;
+            --purple-light: #f5eef8;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            color: var(--blue);
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--gray-900);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        /* Cards Section */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-blue {
+            border-top: 4px solid var(--blue);
+        }
+
+        .card-green {
+            border-top: 4px solid var(--green);
+        }
+
+        .card-purple {
+            border-top: 4px solid var(--purple);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .icon-blue {
+            background-color: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .icon-green {
+            background-color: var(--green-light);
+            color: var(--green);
+        }
+
+        .icon-purple {
+            background-color: var(--purple-light);
+            color: var(--purple);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--gray-800);
+        }
+
+        .card-description {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button-blue {
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .button-blue:hover {
+            background-color: #3a6ae0;
+        }
+
+        .button-green {
+            background-color: var(--green);
+            color: white;
+        }
+
+        .button-green:hover {
+            background-color: #27ae60;
+        }
+
+        .button-purple {
+            background-color: var(--purple);
+            color: white;
+        }
+
+        .button-purple:hover {
+            background-color: #8e44ad;
+        }
+
+        /* Legal Section */
+        .legal-section {
+            background-color: var(--gray-100);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .legal-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .legal-icon {
+            background-color: var(--blue-light);
+            color: var(--blue);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .legal-text {
+            color: var(--gray-600);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--gray-900);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-menu {
+                margin-top: 10px;
+            }
+
+            .hero {
+                padding: 50px 0 40px;
+            }
+
+            .hero-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">Educa+</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link">Início</a>
+                <a href="#" class="nav-link">Recursos</a>
+                <a href="#" class="nav-link">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Sua jornada educacional começa aqui</h1>
+            <p class="hero-description">Conectamos você aos melhores recursos educacionais online, tudo em um só lugar.</p>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="container">
+        <div class="cards-container">
+            <!-- Card 1 - Conteúdo Educativo -->
+            <div class="card card-blue">
+                <div class="card-icon icon-blue">📚</div>
+                <h2 class="card-title">Conteúdo Educativo</h2>
+                <p class="card-description">Acesse materiais didáticos de alta qualidade para todas as disciplinas.</p>
+                <a href="#" class="card-button button-blue">Acessar</a>
+            </div>
+
+            <!-- Card 2 - Quizzes e Jogos -->
+            <div class="card card-green">
+                <div class="card-icon icon-green">🎮</div>
+                <h2 class="card-title">Quizzes e Jogos</h2>
+                <p class="card-description">Aprenda de forma divertida com nossos jogos educativos interativos.</p>
+                <a href="#" class="card-button button-green">Acessar</a>
+            </div>
+
+            <!-- Card 3 - Área do Professor -->
+            <div class="card card-purple">
+                <div class="card-icon icon-purple">👨‍🏫</div>
+                <h2 class="card-title">Área do Professor</h2>
+                <p class="card-description">Recursos exclusivos para educadores aprimorarem suas aulas.</p>
+                <a href="#" class="card-button button-purple">Acessar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Section -->
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-title">
+                <div class="legal-icon">ℹ️</div>
+                <h3>Aviso Legal</h3>
+            </div>
+            <p class="legal-text">
+                O Educa+ atua como uma plataforma de direcionamento para recursos educacionais. 
+                Todos os conteúdos são fornecidos por plataformas parceiras, cada uma com seus 
+                próprios termos de uso e política.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Educa+ | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
