@@ -26,10 +26,15 @@ body {
     background-color: #ffffff;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto 0;
     padding: 0 20px;
 }
 
@@ -53,15 +58,10 @@ header {
     color: var(--gray-900);
 }
 
-.logo-icon {
-    color: var(--blue);
-    font-size: 24px;
-}
-
-.logo-text {
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--gray-900);
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .nav-menu {
@@ -119,6 +119,10 @@ header {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
+}
+
+.content {
+    padding: 0;
 }
 
 .card:hover {
