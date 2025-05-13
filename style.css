@@ -122,7 +122,11 @@ header {
 }
 
 .content {
-    padding: 0;
+    padding: 10px;
+}
+
+.card img {
+    border-radius: 12px;
 }
 
 .card:hover {
