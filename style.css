@@ -224,6 +224,22 @@ header {
     background-color: #8e44ad;
 }
 
+/* Section Description */
+.section-description {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    
+    .lines {
+        border: 1px solid var(--gray-200);
+        flex: 1;
+        height: 2px;
+    }
+}   
+
 /* Legal Section */
 .legal-section {
     background-color: var(--gray-100);
