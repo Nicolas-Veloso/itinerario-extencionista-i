@@ -119,6 +119,11 @@ header {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .content {
