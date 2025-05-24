@@ -132,3 +132,24 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".feedback-trigger").style.display = "block";
   }, 30000);
 });
+// No seu script.js, adicione:
+function handleTouch(event) {
+  event.preventDefault(); // Evita comportamentos padrão do touch
+  const touch = event.changedTouches[0];
+  const element = document.elementFromPoint(touch.clientX, touch.clientY);
+  if (element && element.classList.contains('nps-btn')) {
+    element.click();
+  }
+}
+
+// Adicione este evento no seu initNPSScale():
+function initNPSScale() {
+  for (let i = 0; i <= 10; i++) {
+    const btn = document.createElement("button");
+    btn.className = "nps-btn";
+    btn.textContent = i;
+    btn.onclick = () => selectScore(i);
+    btn.addEventListener('touchstart', handleTouch, {passive: false});
+    npsScale.appendChild(btn);
+  }
+}

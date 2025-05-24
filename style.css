@@ -333,40 +333,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-menu {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-menu {
-        margin-top: 10px;
-    }
-
-    .hero {
-        padding: 50px 0 40px;
-    }
-
-    .hero-title {
-        font-size: 1.75rem;
-    }
-}
-
+/* Pop-up */
 .modal {
   display: none;
   position: fixed;
@@ -496,4 +463,104 @@ button:hover {
 
 .thank-you-message button:hover {
   background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 15px;
+    }
+
+    .nps-scale {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .nps-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    #feedback-text {
+        min-height: 80px;
+    }
+
+    .feedback-trigger {
+        padding: 10px 15px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+}
+
+/* Garante que o modal não ultrapasse a altura da tela */
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Melhora a experiência touch */
+.nps-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ajusta o textarea para mobile */
+#feedback-text {
+  font-size: 16px; /* Evita zoom em iOS */
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 50px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    .modal-content {
+        padding: 10px;
+    }
+
+    .nps-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-message h2 {
+        font-size: 2rem;
+    }
+
+    .thank-you-message h3 {
+        font-size: 1.2rem;
+    }
 }
