@@ -7,6 +7,7 @@
     <title>Educa+ | Sua jornada educacional</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 
 <body>
@@ -86,6 +87,31 @@
             <p>© 2025 Educa+ | Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- Pop-up-->
+    <button class="feedback-trigger" onclick="showFeedback()">Deixe seu feedback</button>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+        <span class="close-btn" onclick="closeFeedback()">&times;</span>
+        <h2>Poderia avaliar nosso site e nos dizer como foi sua experiência?</h2>
+        
+        <div class="nps-container">
+            <p>De 0 a 10, qual a chance de você nos recomendar?</p>
+            <div class="nps-scale">
+            <!-- Buttons will be added by JavaScript -->
+            </div>
+        </div>
+
+        <div id="followup-section" class="hidden">
+            <p id="followup-question"></p>
+            <textarea id="feedback-text" placeholder="Nos conte mais..."></textarea>
+            <button onclick="submitFeedback()">Enviar</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="/itinerario-extencionista-i/javascript/script.js"></script>
 </body>
 
 </html>
