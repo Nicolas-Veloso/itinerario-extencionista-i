@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Itinerário Extensionista</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="assets/educamais.png" alt="Logo do projeto educa mais">
+        </a>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="#" class="nav-link">Sobre</a>
+        </nav>
+    </div>
+</header>
+<div class="section-description">
+    <div class="lines"></div>
+    <h2>Sobre o Projeto</h2>
+    <div class="lines"></div>
+</div>
+
+<section id= "Sobre">
+    <h3>Quem Somos</h3>
+    <p>Somos uma equipe extensionista dedicada a enfrentar a desigualdade educacional nas escolas públicas. Nosso projeto busca oferecer soluções acessíveis, como uma plataforma online com conteúdos educativos gratuitos para alunos e professores do ensino fundamental e médio.</p>
+    <br>
+    <h3>Nossa Missão</h3>
+    <p>Promover acesso equitativo ao conhecimento, incentivar o protagonismo estudantil e apoiar práticas pedagógicas inovadoras, fortalecendo a conexão entre universidade, escola e comunidade.</p>
+    <br>
+    <h3>O Que Fizemos</h3>
+    <p>Desenvolvemos uma landing page simples e responsiva que reúne links educativos organizados por disciplina e série, facilitando o estudo autônomo e a preparação de aulas. Trabalhamos em equipe para garantir acessibilidade, usabilidade e impacto social positivo.</p>
+    <br>
+    <h3>Por Que Isso Importa</h3>
+    <p>Essa iniciativa responde diretamente ao ODS 4 (Educação de Qualidade), reduzindo desigualdades e ampliando oportunidades educacionais em comunidades vulneráveis.</p>
+</section>
+
+<footer>
+    <div class="container">
+        <!--<p>© 2025 Educa+ | Todos os direitos reservados.</p>-->
+        <p>&copy; 2025 Projeto Itinerário Extensionista - Educação de Qualidade</p>
+    </div>
+</footer>
+
+<!-- Pop-up-->
+<button class="feedback-trigger" onclick="showFeedback()">Deixe seu feedback</button>
+
+<div id="feedback-modal" class="modal">
+    <div class="modal-content">
+    <span class="close-btn" onclick="closeFeedback()">&times;</span>
+    <h2>Poderia avaliar nosso site e nos dizer como foi sua experiência?</h2>
+    
+    <div class="nps-container">
+        <p>De 0 a 10, qual a chance de você nos recomendar?</p>
+        <div class="nps-scale">
+        <!-- Buttons will be added by JavaScript -->
+        </div>
+    </div>
+
+    <div id="followup-section" class="hidden">
+        <p id="followup-question"></p>
+        <textarea id="feedback-text" placeholder="Nos conte mais..."></textarea>
+        <button onclick="submitFeedback()">Enviar</button>
+    </div>
+    </div>
+</div>
+
+<script src="javascript/script.js"></script>
+
+</body>
+</html>
